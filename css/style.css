@@ -1,3 +1,11 @@
+/* CUSTOM PROPS */
+:root{
+  --blue: #5267df;
+  --red: #fa5959;
+  --text-color: #242a45;
+  --text-color-75: rgba(36, 42, 69, 0.75);
+  --text-color-50: rgba(36, 42, 69, 0.50);
+}
 
 /* Global */
 
@@ -20,7 +28,7 @@ body{
     padding: 0;
     margin: 0;
     background-color: #fff;
-    color: #222;
+    color: var();
     font-family: 'Rubik', 'Arial', sans-serif;
     font-size: 16px;
     line-height: 36px;
