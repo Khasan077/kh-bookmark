@@ -113,3 +113,64 @@ select:-webkit-autofill:focus {
   overflow: hidden;
 }
 
+.button {
+  display: inline-block;
+  padding: 8px 22px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  font-size: 14px;
+  text-align: center;
+  line-height: 2;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.button:active{
+  opacity: 0.6;
+}
+
+.button--red {
+  background-color: var(--red);
+  color: #fff;
+}
+
+.button--red:hover{
+  border-color: var(--red);
+  background-color: #fff;
+  color: var(--red);
+}
+
+.button--site-headaer{
+  padding: 10px 31px;
+  font-size: 13px;
+  line-height: 17px;
+  letter-spacing: 1.5px;
+}
+
+.button--blue {
+  background-color: var(--blue);
+  color: #fff;
+}
+
+.button--blue:hover{
+  border-color: var(--blue);
+  background-color: #fff;
+  color: var(--blue);
+}
+
+.button--grey {
+  background-color: var(--grey);
+  color: #fff;
+}
+
+.button--grey:hover{
+  border-color: #5b6074;
+  background-color: #fff;
+  color: var(--text-color);
+}
+
+.button-block{
+  width: 100%;
+}
