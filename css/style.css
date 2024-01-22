@@ -174,3 +174,24 @@ select:-webkit-autofill:focus {
 .button-block{
   width: 100%;
 }
+/* LOGO */
+.logo {
+  display: block;
+  text-decoration: none;
+}
+
+.logo__img {
+  display: block;
+  width: 149px;
+  height: 25px;
+  object-fit: contain;
+}
+
+.logo:hover{
+  opacity: 0.8;
+}
+
+.logo:active{
+  opacity: 0.6;
+}
+
