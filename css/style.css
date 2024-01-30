@@ -357,6 +357,70 @@ select:-webkit-autofill:focus {
   display: block;
 }
 
+/* ACCORDION */
+
+.accordion {
+  border-top: 1px solid rgba(36, 42, 69, 0.15);
+}
+.accordion__item {
+  border-bottom: 1px solid rgba(36, 42, 69, 0.15);
+}
+.accordion_item-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 13px;
+}
+.accordion__item-title {
+  margin: 0;
+  flex-grow: 1;
+  margin-right: 24px;
+  font-size: 18px;
+  line-height: 32px;
+  font-weight: 400;
+}
+.accordion__item-toggler {
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.accordion__item-toggler::before{
+  position: absolute;
+  left: 0;top: 0;
+  width: 100%;
+  height: 100px;
+  content: "";
+}
+
+.acardion__item-toggler-icon {
+  display: block;
+  width: 20px;
+  height: 13px;
+  color: var(--blue);
+}
+.accordion__item-content {
+  display: none;
+  padding-top: 19px;
+  padding-bottom: 29px;
+  color: var(--text-color-75);
+}
+
+.accordion__item--open .accordion__item-content{
+  display: block;
+}
+
+.accordion__item--open .acardion__item-toggler-icon{
+  transform: rotate(180deg);
+  color: var(--red);
+}
+
+.accordion__item-text {
+  margin: 0;
+}
+
 /* SITE-HEADER */
 .site-header {
   padding-top: 48px;
@@ -515,4 +579,64 @@ select:-webkit-autofill:focus {
   margin-top: 0;
   margin-bottom: 60px;
   columns: var(--text-color-50);
+}
+
+/* FAQ */
+.faq{
+  padding-bottom: 150px;
+}
+
+.faq__inner{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-width: 540px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.faq__accordion{
+  width: 100%;
+  margin-bottom: 54px;
+}
+
+
+/* SITE-FOOTER */
+.site-footer {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  background-color: var(--text-color);
+  color: #fff;
+}
+
+.site-footer__container {
+  display: flex;
+  align-items: center;
+}
+
+.site-footer__logo {
+  margin-right: 63px;
+}
+
+.site-footer__sitenav {
+  margin-right: auto;
+}
+
+.sitenav--white .sitenav__link {
+  color: #fff;
+} 
+
+.socials {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.socials__item:not(:last-child) {
+  margin-right: 40px;
+}
+.socials__link {
+  display: flex;
+  color: #fff;
 }
