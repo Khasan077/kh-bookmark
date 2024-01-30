@@ -1,3 +1,9 @@
+const modifiers = {
+    tabItemActive: 'tabs__item--active',
+    accordionItemOpen: 'accordion__item--open',
+    tabsPanelActive: 'tabs__panel--active',
+}
+
 const elsTabItem = document.querySelectorAll('.tabs__item');    
 const elsTabPanel = document.querySelectorAll('.taps__panel ');
 const elsTabLink = document.querySelectorAll('.js-tab-link');
@@ -7,19 +13,19 @@ const elsAccordionItemToggler = document.querySelectorAll('.accordion__item-togg
 
 function deactivateTabItems() {
     elsTabItem.forEach(function (elTabItem) {
-        elTabItem.classList.remove('tabs__item--active');
+        elTabItem.classList.remove(modifiers.tabItemActive);
     })
 }
 
 function deactivateTabPanel() {
     elsTabPanel.forEach(function (elTabPanel) {
-        elTabPanel.classList.remove('tabs__panel--active');
+        elTabPanel.classList.remove(modifiers.tabItemActive);
     })
 }
 
 function closeAccordionItems() {
     elsAccordionItem.forEach(function (elsAccordionItem) {
-        elsAccordionItem.classList.remove('accordion__item--open');
+        elsAccordionItem.classList.remove(modifiers.accordionItemOpen);
     })
 }
 
@@ -35,11 +41,11 @@ elsTabLink.forEach(function (elTabLink) {
         deactivateTabPanel()
 
         // Add active class t current tabs__item
-        elTabLink.parentElement.classList.add('tabs__item--active')
+        elTabLink.parentElement.classList.add(modifiers.tabItemActive)
 
         // show active panel
         const elTargetPanel = document.querySelector(`#${elTabLink.href.split('#')[1]}`);
-        elTargetPanel.classList.add('tabs__panel--active');
+        elTargetPanel.classList.add(modifiers.tabItemActive);
     });
 });
 
